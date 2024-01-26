@@ -1,0 +1,25 @@
+{
+  "name": "elysia-prisma",
+  "version": "1.0.50",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts"
+  },
+  "dependencies": {
+    "@elysiajs/html": "^0.8.0",
+    "@elysiajs/stream": "^0.8.0",
+    "@prisma/client": "^5.8.1",
+    "dotenv": "^16.4.1",
+    "elysia": "^0.8.10",
+    "eta": "^3.2.0"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "prisma": "^5.8.1"
+  },
+  "module": "src/index.js",
+  "type": "module",
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
