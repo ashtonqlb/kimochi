@@ -1,12 +1,32 @@
-import { Elysia } from 'elysia'
-import { Eta } from "eta";
+import { Elysia, t } from "elysia";
+import { staticPlugin } from "@elysiajs/static";
+import { html } from "@elysiajs/html";
+import { htmx } from "elysia-htmx";
 
-const view_path = Bun.main + "/../templates"
-const eta = new Eta({ views: view_path, cache: true}); //This is super ugly. Maybe ask someone nicely for an alternative solution
+// import { PrismaClient } from "@prisma/client";
+
+// const db = new PrismaClient();
 const app = new Elysia()
-    .get('/', () => eta.render("./upload", { name: "Ben" }))
-    .listen(3000);
+  .use(staticPlugin())
+  .use(html())
+  .use(htmx())
+  .get("/", () => `default`)
+//   .post(
+//     "/upload",
+//     async ({ body }) =>
+//       db.user.create({
+//         data: body,
+//       }),
+//     {
+//       body: t.Object({
+//         uuid: t.String(),
+//         uploader: t.String(),
+//         name: t.String(),
+//       }),
+//     }
+//   )
+  .listen(3000);
 
 console.log(
-    `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
-)
+  `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
+);

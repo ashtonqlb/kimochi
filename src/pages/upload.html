@@ -1,0 +1,17 @@
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>きもち</h1>
+            <p class="lead">Max upload size is x, files expire after y hours</p>
+            <form id="upload-form" enctype="multipart/form-data" method="post" action="upload?output=html" class="js"><button id="upload-btn" class="btn" type="button">Drop or paste file(s)</button><input type="file" id="upload-input" name="files[]" multiple="" data-max-size="64MiB"> <input type="submit" value="Submit"></form>
+            <ul id="upload-filelist"></ul>
+        </div>
+        <p class="alert alert-info"><strong>Kimochi is alpha software— here be dragons.</strong>Please, don't be afraid to <a href="https://github.com/ashtonqlb/kimochi/issues"></a>report any bugs you encounter</p>
+        </p>
+        <nav>
+            <ul>
+                <li><a href="https://github.com/ashtonqlb/kimochi">GitHub</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
