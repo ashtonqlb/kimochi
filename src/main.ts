@@ -3,6 +3,7 @@ import { staticPlugin } from "@elysiajs/static";
 import { html } from "@elysiajs/html";
 import { htmx } from "elysia-htmx";
 
+t; // silence eslint warning for now
 // import { PrismaClient } from "@prisma/client";
 
 // const db = new PrismaClient();
