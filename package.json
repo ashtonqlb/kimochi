@@ -1,0 +1,34 @@
+{
+  "name": "kimochi",
+  "version": "0.01",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint .",
+    "dev": "bun run --watch src/main.ts"
+  },
+  "dependencies": {
+    "@elysiajs/html": "^0.8.0",
+    "@elysiajs/static": "^0.8.1",
+    "@elysiajs/stream": "^0.8.0",
+    "@microsoft/eslint-formatter-sarif": "^2.1.7",
+    "@prisma/client": "^5.8.1",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "dotenv": "^16.4.1",
+    "elysia": "^0.8.10",
+    "elysia-htmx": "^1.0.9",
+    "htmx.org": "^1.9.10"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^5.0.1",
+    "bun-types": "latest",
+    "eslint": "^8.56.0",
+    "prettier": "^2.5.1",
+    "prisma": "^5.8.1",
+    "typescript": "^4.4.4"
+  },
+  "module": "src/main.js",
+  "type": "module",
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

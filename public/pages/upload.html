@@ -1,0 +1,42 @@
+<!-- SEO-optimised <head> and <meta> tags go here -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your PWA Description">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Add to home screen for Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Your PWA Name">
+    <!-- <link rel="icon" sizes="192x192" href="path/to/your/icon.png"> -->
+
+    <!-- Add to home screen for iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Your PWA Name">
+    <!-- <link rel="apple-touch-icon" href="path/to/your/icon.png"> -->
+
+    <link rel="stylesheet" href="/styles/stylesheet.css">
+    <title>Kimochi</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>きもち</h1>
+            <p class="lead">Max upload size is x, files expire after y hours</p>
+            <form id="upload-form" enctype="multipart/form-data" method="post" action="upload?output=html" class="js"><button id="upload-btn" class="btn" type="button">Drop or paste file(s)</button><input type="file" id="upload-input" name="files[]" multiple="" data-max-size="64MiB"> <input type="submit" value="Submit"></form>
+            <ul id="upload-filelist"></ul>
+        </div>
+        <p class="alert alert-info"><strong>Kimochi is alpha software— here be dragons.</strong>Please, don't be afraid to <a href="https://github.com/ashtonqlb/kimochi/issues"></a>report any bugs you encounter</p>
+        </p>
+        <nav>
+            <ul>
+                <li><a href="https://github.com/ashtonqlb/kimochi">GitHub</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
