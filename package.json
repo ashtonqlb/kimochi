@@ -3,6 +3,7 @@
   "module": "index.ts",
   "dependencies": {
     "hono": "^3.12.8",
+    "prisma": "^5.9.0",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
