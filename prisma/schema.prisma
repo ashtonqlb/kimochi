@@ -3,12 +3,12 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "mongodb"
   url      = env("DATABASE_URL")
 }
 
 model File {
-  uuid     String  @id @default("00000000-0000-0000-0000-000000000000")
+  hash     String  @id @default(auto()) @map("_id") @db.ObjectId  
   uploader String  @unique
   name     String
 }
