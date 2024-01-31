@@ -16,7 +16,7 @@
   },
   "scripts": {
     "dev": "bun run --hot src/index.ts",
-    "lint": "npx eslint ."
+    "lint": "bunx eslint ."
   },
   "type": "module"
 }
