@@ -1,9 +1,26 @@
 import { Hono } from 'hono'
+import { PrismaClient } from '@prisma/client'
 
 const app = new Hono()
+const prisma = new PrismaClient;
+
+async function prisma_test() {
+  await prisma.$connect();
+}
 
 app.get('/', (c) => {
   return c.text('Hello Hono!')
+})
+
+app.get('/prisma-test', (c) => {
+  prisma_test().catch(async (e) => {
+    console.error(e)
+    process.exit(1)
+
+  }).finally(async () => {
+    await prisma.$disconnect()
+  });
+  return c.text('Prisma connected')
 })
 
 app.post('/upload', async (c) => {
