@@ -3,11 +3,11 @@
   "module": "index.ts",
   "dependencies": {
     "hono": "^3.12.8",
-    "supertest": "^6.3.4",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
     "eslint": "^8.56.0",
+    "form-data": "^4.0.0",
     "@types/bun": "latest",
     "@typescript-eslint/parser": "^5.0.1",
     "@typescript-eslint/eslint-plugin": "latest"
